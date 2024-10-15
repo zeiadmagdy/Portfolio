@@ -1,0 +1,92 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /* background: linear-gradient(to bottom right, #212529, black); */
+    /* Fixed the background syntax */
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: #6f6ee9;
+}
+
+header nav a {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+}
+
+header nav a:hover {
+    border-bottom: 2px solid #6f6ee9;
+    color: #6f6ee9;
+}
+
+header nav a:last-child {
+    margin-right: 0;
+}
+
+/* Media Query for Tablets (max-width: 1024px) */
+@media (max-width: 1024px) {
+    header {
+        padding: 0.8rem;
+        /* Reduce padding */
+    }
+
+    header a {
+        font-size: 2.5rem;
+        /* Smaller font size for logo/brand */
+    }
+
+    header nav a {
+        font-size: 1.3rem;
+        /* Adjust navigation link font size */
+        margin-right: 0.8rem;
+        /* Reduce spacing between links */
+    }
+}
+
+/* Media Query for Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header a {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    header nav a {
+        font-size: 1.2rem;
+        margin-right: 0.5rem;
+    }
+}
+
+/* Media Query for Smaller Mobile Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem;
+        /* Minimal padding for small screens */
+    }
+
+    header a {
+        font-size: 1.5rem;
+        /* Further reduce logo font size */
+    }
+
+    header nav a {
+        font-size: 1rem;
+        /* Smaller font size for links */
+        margin-right: 0.5rem;
+        /* Tighten spacing between links */
+    }
+}

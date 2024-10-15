@@ -1,1 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* 
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    color: white;
+    background-image: linear-gradient(to bottom right, #212529, black);
+    height: 100vh;
+} */
+
+body {
+    font-family: 'Cairo', sans-serif;
+    transition: color 0.9s ease !important;
+    overflow-x: hidden;
+    width: 101%;
+    direction: ltr;
+    background: linear-gradient(150deg, #212529, #1d1f22, #000000);
+    min-height: 55vh;
+}

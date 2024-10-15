@@ -1,0 +1,212 @@
+/* General styles for larger screens */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #000;
+    /* Black background for contrast */
+    color: #fff;
+    /* White text for contrast */
+    font-family: Arial, sans-serif;
+    /* A basic font */
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2rem;
+    height: 100vh;
+    overflow: hidden;
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+}
+
+.text {
+    max-width: 60%;
+    color: #fff;
+    animation: fadeInText 1.5s ease-in-out forwards;
+    opacity: 0;
+    /* Initially hidden */
+}
+
+.text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    animation: slideInFromLeft 1.5s ease-in-out forwards;
+    opacity: 0;
+    /* z-index: 1; */
+    /* Initially hidden */
+}
+
+.text p {
+    font-size: 2rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    animation: slideInFromLeft 2s ease-in-out forwards;
+    opacity: 0;
+    z-index: -1;
+    /* Initially hidden */
+}
+
+.hero-image {
+    max-width: 30%;
+    height: auto;
+    filter: drop-shadow(0px 0px 0px #000000) brightness(0.8);
+    animation: zoomIn 2s ease-in-out forwards;
+    opacity: 0;
+    border-radius: 50%;
+    background-color: #333333b7;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+
+.download-btn {
+    padding: 10px 20px;
+    background: linear-gradient(60deg, #4e54c8, #8f94fb);
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+span {
+    color: #6f6ee9;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+
+/* Keyframes for animations */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .text {
+        max-width: 60%;
+    }
+
+    .text h1 {
+        font-size: 3rem;
+    }
+
+    .text p {
+        font-size: 1.8rem;
+    }
+
+    .hero-image {
+        max-width: 40%;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 1.5rem 1rem;
+        height: auto;
+    }
+
+    .text h1 {
+        font-size: 0.8rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .text p {
+        font-size: 0.8rem;
+    }
+
+    .hero-image {
+        max-width: 40%;
+        margin-top: 1rem;
+    }
+
+    .download-btn {
+        padding: 5px 10px;
+        max-width: 40%;
+        font-size: 0.6rem;
+    }
+
+    span {
+        font-size: 1rem;
+    }
+}
+
+
+
+/*   
+  button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 30px;
+    margin-right: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.hire-me {
+    background-color: #f1b21b;
+    color: black;
+  }
+  
+  button.my-works {
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  button.hire-me:hover {
+    background-color: #e0a00d;
+  }
+  
+  button.my-works:hover {
+    background-color: white;
+    color: black;
+  }
+   */
+

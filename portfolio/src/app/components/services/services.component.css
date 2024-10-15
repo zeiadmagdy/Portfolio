@@ -1,0 +1,101 @@
+.services {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    color: #6f6ee9;
+}
+
+.service-card {
+    position: relative;
+    background-color: #202121;
+    color: #fff;
+    border-radius: 15px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    overflow: hidden;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.service-card:hover {
+    background-color: #6f6ee9;
+    transform: translateY(-10px);
+}
+
+.service-card h4 {
+    transition: color 0.3s ease;
+}
+
+.service-card:hover h4 {
+    color: #fff;
+}
+
+.service-card p {
+    transition: color 0.3s ease;
+}
+
+.service-card:hover p {
+    color: #fff;
+}
+
+.service-card .icon {
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.service-card:hover .icon {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+.service-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* @media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} */
+
+/* Hover Effects */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Shadow hover effect */
+.service-card:hover {
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* General styling */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}

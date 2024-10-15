@@ -1,0 +1,86 @@
+/* About Section Styling */
+* {
+    margin: 0;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+
+.about {
+    justify-content: end;
+    color: #fff;
+    /* padding: 4rem 0; */
+
+    h1 {
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 2rem;
+        animation: slideInFromLeft 1.5s ease-in-out forwards;
+        opacity: 0;
+        color: #6f6ee9;
+        /* Initially hidden */
+    }
+
+    p {
+        font-size: 1.5rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        animation: slideInFromLeft 2s ease-in-out forwards;
+        opacity: 0;
+        /* Initially hidden */
+    }
+
+    .about-content {
+        animation: fadeInText 2s ease-in-out forwards;
+        opacity: 0;
+        /* Initially hidden */
+    }
+}
+
+/* Keyframes for animations */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    .about h1 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        /* padding: 2rem 1rem; */
+        width: 100%;
+    }
+
+    .about h1 {
+        font-size: 2rem;
+    }
+
+    .about p {
+        font-size: 0.8rem;
+    }
+}
